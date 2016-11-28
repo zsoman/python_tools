@@ -104,7 +104,6 @@ word_game()
 # ### 4.2.1
 # Define a function that takes as its input a list of $n$ lists of $n$ numbers (a square matrix) and decides if it is symmetric (i.e. $A[i,j] == A[j,i]$ for all $i, j$).
 
-# In[ ]:
 
 def is_symetric_matrix(matrix):
     for i in range(len(matrix)):
@@ -123,7 +122,6 @@ print(is_symetric_matrix(matrix))
 # ### 4.2.2
 # Define a function that takes a list containing lists of equal length (i.e. a table of size $n\times k$) and "transposes" it, creating a table of size $k\times n$.
 
-# In[ ]:
 
 from sys import stdout
 
@@ -150,7 +148,6 @@ print_matrix(transpose_matrix(matrix))
 # ### 4.2.3
 # Redo 4.2.3 using nested list comprehension!
 
-# In[ ]:
 
 matrix=[[1, 7, 3, 9],
        [7, 4, -5, 0],
@@ -163,7 +160,6 @@ print_matrix(new_matrix)
 
 # Define a function that takes a list and string, then returns all elements that start with the string, along with their indices in the list.
 
-# In[ ]:
 
 def elements_that_stat_with(elements, string):
     result=[]
@@ -182,7 +178,6 @@ print(elements_that_stat_with(elements,'a'))
 # ### 4.3.1
 # Use a dictionary to count words in our sample text (use your text processing functions!). Then print the most common words, along with their frequencies!
 
-# In[ ]:
 
 def count_words(words=splitter()):
     nr_of_words={}
@@ -200,7 +195,6 @@ print(count_words())
 
 # Define function that performs the factorial operation ($n!$) but caches all results so that each call requires the least possible number of multiplications.
 
-# In[ ]:
 
 store_factorial={0:1, 1:1}    
 
@@ -225,7 +219,6 @@ while readed!=0:
 # ### 4.3.3
 # Read the dataset in "data/movies.tsv" and store it in a dictionary whose keys are genres and the values are list of tuples of title and year
 
-# In[ ]:
 
 def store_movies(file='data/movies.tsv'):
     movies_map={}
@@ -248,7 +241,6 @@ for genere_key, movies_value in store_movies().items():
 # ### 4.3.4
 # Process the movies dataset (the original file or the dictionary built in __4.3.3__) and build a dictionary that indexes movies by the first letter of the title. Then create a small interface for querying (using the input function)
 
-# In[ ]:
 
 movies={}
 def movies_by_letter(file='data/movies.tsv'):
@@ -283,7 +275,6 @@ while leter != 'stop':
 # ### 4.3.5
 # Build an incremental search of movie titles: users should be able to narrow the set of movies with every character they type. You may create deeply nested dictionaries beforehand or process the data on-the-fly.
 
-# In[4]:
 
 def build_index(data):
     for movie in data:
@@ -319,8 +310,6 @@ def search(fn):
 search('data/movies.tsv')
     
 
-
-# In[12]:
 
 def unify_dicts(dict1, dict2):
     dict3={}
@@ -377,7 +366,6 @@ search('data/movies.tsv')
 # ### 4.4.1
 # Modify the word counter in __4.3.1__ so that it uses a defaultdict.
 
-# In[ ]:
 
 from collections import defaultdict
 def count_words(words=splitter()):
@@ -392,7 +380,6 @@ print(count_words())
 # ### 4.4.2
 # Modify the word counter in __4.4.1__ so that it uses a Counter.
 
-# In[ ]:
 
 from collections import Counter
 def count_words(words=splitter()):
@@ -407,7 +394,6 @@ print(count_words())
 # ### 4.4.3
 # Define a function that queries users for their last name, first name, year of birth, and hobby, and populates an OrderedDict whose keys are the last names and values are dictionaries with four keys each. If a second person with the same last name is encountered, both should now have keys of the form "lastname_firstname". If the same person is encountered multiple times, his/her data should be updated. Then test the solution of someone else and ask her to test yours.
 
-# In[13]:
 
 from collections import OrderedDict
 
@@ -437,7 +423,6 @@ while readed != 'stop':
 # ### 4.4.4
 # Convert the database built in __4.4.3__ into a list of namedtuples.
 
-# In[ ]:
 
 from collections import namedtuple
 from collections import OrderedDict
