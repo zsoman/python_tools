@@ -40,6 +40,8 @@ def split_sentences_to_words(sentence):
 
 def splitter(file='data/sample_text.txt'):
     all_words = []
+
+    print("Akarmi")
     with open(file) as f:
         text = f.read()
         for sentence in split_to_sentences(text):
