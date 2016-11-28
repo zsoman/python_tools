@@ -17,15 +17,11 @@
 # ### 4.1.1
 # Define a function that splits a text into sentences (on ".", "!", "?", etc.)
 
-# In[1]:
-
 def split_to_sentences(text):
     return text.replace('!', '.').replace('?', '.').split('.')
 
 
 # Define a function that splits sentences into words, and strips punctuation marks (",", ";", etc.) from edges of words.
-
-# In[2]:
 
 def split_sentences_to_words(sentence):
     words = []
@@ -35,8 +31,6 @@ def split_sentences_to_words(sentence):
 
 
 # Use the last two functions in one that takes a filename as its argument and returns the text in the file as a list of lists. Test it on the file "data/sample_text.txt"
-
-# In[4]:
 
 def splitter(file='data/sample_text.txt'):
     all_words = []
@@ -53,8 +47,6 @@ for a, b, c, d in zip(result[::4], result[1::], result[2::4], result[3::4]):
 
 # ### 4.1.2
 # Use the functions defined in __4.1.1__ and define a function that goes through a text and replaces all proper names (capitalized words not at the beginning of a sentence) with "Joe". Print the first few sentences to test your solution.
-
-# In[ ]:
 
 def change_names(text, name='Joe'):
     sentence_list=split_to_sentences(text)
@@ -78,8 +70,6 @@ with open('data/sample_text.txt') as f:
 
 # ### 4.1.3
 # Load the sample text using your function from __4.1.1__ and create a game where the user is shown a half of a word in a small context (e.g. "_Many solu\*\*\*\*\* were suggested_") and has to guess the full word (don't worry about randomization, your solution can come up with the same questions every time).
-
-# In[ ]:
 
 from random import randint
 def word_randomizer(words_to_randomize_from):
