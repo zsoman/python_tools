@@ -34,11 +34,13 @@ def split_sentences_to_words(sentence):
 
 def splitter(file='data/sample_text.txt'):
     all_words = []
-    with open(file) as f:
-        text = f.read()
-        for sentence in split_to_sentences(text):
-            all_words += split_sentences_to_words(sentence)
-        return all_words
+    
+    f = open(file)
+    text = f.read()
+    for sentence in split_to_sentences(text):
+        all_words += split_sentences_to_words(sentence)
+    f.close()
+    return all_words
         
 result=splitter()
 for a, b, c, d in zip(result[::4], result[1::], result[2::4], result[3::4]):
